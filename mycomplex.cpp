@@ -1,6 +1,6 @@
 /*!
     @file
-    @brief Файл с описанием методов класса Complex.
+    @brief Р¤Р°Р№Р» СЃ РѕРїРёСЃР°РЅРёРµРј РјРµС‚РѕРґРѕРІ РєР»Р°СЃСЃР° Complex.
 */
 #include <iostream>
 #include <cmath>
@@ -9,56 +9,56 @@
 using namespace std;
 
 /*!
-    @brief Конутруктор класса
-    @param aRe Действительная составляющая
-    @param aIm Мнимая составляющая
+    @brief РљРѕРЅСѓС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР°.
+    @param aRe Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅР°СЏ СЃРѕСЃС‚Р°РІР»СЏСЋС‰Р°СЏ
+    @param aIm РњРЅРёРјР°СЏ СЃРѕСЃС‚Р°РІР»СЏСЋС‰Р°СЏ
 */
-Complex::Complex(double aRe, double aIm)
+Complex :: Complex(double aRe, double aIm)
 {
     Re = aRe;
     Im = aIm;
 }
 
 /*!
-    @brief Конструктор класса
-    @param aRval Комплексное число
+    @brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР°.
+    @param aRval - РєРѕРјРїР»РµРєСЃРЅРѕРµ С‡РёСЃР»Рѕ
 */
-Complex::Complex(const Complex & aRval)
+Complex :: Complex(const Complex & aRval)
 {
     Re = aRval.Re;
     Im = aRval.Im;
 }
 
 /*!
-    @brief Деструктор класса
+    @brief Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР°
 */
-Complex::~Complex()
+Complex :: ~Complex()
 {
     Re = 0.0;
     Im = 0.0;
 }
 
 /*!
-    @brief Установление мнимой и действительной состовляющих
+    @brief РЈСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РјРЅРёРјРѕР№ Рё РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕР№ СЃРѕСЃС‚Р°РІР»СЏСЋС‰РёС…
 */
-void Complex::Set(double aRe, double aIm)
+void Complex :: Set(double aRe, double aIm)
 {
     Re = aRe;
     Im = aIm;
 }
 
 /*!
-    @brief Возвращает модуль комплексного числа
-    @return Модуль комплексного числа
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ РјРѕРґСѓР»СЊ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return РњРѕРґСѓР»СЊ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
 */
-Complex::operator double()
+Complex :: operator double()
 {
     return abs();
 }
 
 /*!
-    @brief Возвращает модуль выражения комплексного числа
-    @return Модуль выражения комплексного числа
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ РјРѕРґСѓР»СЊ РІС‹СЂР°Р¶РµРЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return РњРѕРґСѓР»СЊ РІС‹СЂР°Р¶РµРЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
 */
 double Complex::abs()
 {
@@ -66,10 +66,10 @@ double Complex::abs()
 }
 
 /*!
-    @brief Возвращает результат сложения комплексного числа
-    @return Результат сложения комплексного числа
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р РµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
 */
-Complex Complex::operator + (const Complex & aRval)
+Complex Complex :: operator + (const Complex & aRval)
 {
     Complex Result;
     Result.Re = Re + aRval. Re;
@@ -78,10 +78,10 @@ Complex Complex::operator + (const Complex & aRval)
 }
 
 /*!
-    @brief Возвращает результат вычитания комплексного числа
-    @return Результат вычитания комплексного числа
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёС‚Р°РЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р РµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёС‚Р°РЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
 */
-Complex Complex::operator - (const Complex & aRval)
+Complex Complex :: operator - (const Complex & aRval)
 {
     Complex Result;
     Result.Re = Re - aRval.Re;
@@ -90,10 +90,10 @@ Complex Complex::operator - (const Complex & aRval)
 }
 
 /*!
-    @brief Возвращает результат сложения действительного числа
-    @return Результат сложения действительного числа
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р РµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
 */
-Complex Complex::operator + (const double & aRval)
+Complex Complex :: operator + (const double & aRval)
 {
     Complex Result;
     Result.Re = Re + aRval;
@@ -102,10 +102,10 @@ Complex Complex::operator + (const double & aRval)
 }
 
 /*!
-    @brief Возвращает результат вычитания действительного числа
-    @return Результат вычитания действительного числа
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёС‚Р°РЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р РµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёС‚Р°РЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
 */
-Complex Complex::operator - (const  double & aRval)
+Complex Complex :: operator - (const  double & aRval)
 {
     Complex Result(*this);
     Result.Re = Re - aRval;
@@ -113,10 +113,10 @@ Complex Complex::operator - (const  double & aRval)
 }
 
 /*!
-    @brief Возвращает результат умножения комплексного числа
-    @return Результат умножения комплексного числа
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ СѓРјРЅРѕР¶РµРЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р РµР·СѓР»СЊС‚Р°С‚ СѓРјРЅРѕР¶РµРЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
 */
-Complex Complex::operator * (const Complex  & aRval)
+Complex Complex  :: operator * (const Complex  & aRval)
 {
     Complex Result;
     Result.Re = Re * aRval.Re - Im * aRval.Im;
@@ -125,10 +125,10 @@ Complex Complex::operator * (const Complex  & aRval)
 }
 
 /*!
-    @brief Возвращает результат умножения действительного числа
-    @return Результат умножения действительного числа
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ СѓРјРЅРѕР¶РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р РµР·СѓР»СЊС‚Р°С‚ СѓРјРЅРѕР¶РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
 */
-Complex Complex::operator * (const double & aRval)
+Complex Complex :: operator * (const double & aRval)
 {
     Complex Result;
     Result.Re = Re * aRval;
@@ -137,10 +137,10 @@ Complex Complex::operator * (const double & aRval)
 }
 
 /*!
-    @brief Возвращает результат деления действительного числа
-    @return Результат деления действительного числа
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ РґРµР»РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р РµР·СѓР»СЊС‚Р°С‚ РґРµР»РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
 */
-Complex Complex::operator / (const double & aRval)
+Complex Complex :: operator /(const double & aRval)
 {
     Complex Result;
     Result.Re = Re / aRval;
@@ -149,10 +149,10 @@ Complex Complex::operator / (const double & aRval)
 }
 
 /*!
-    @brief Ссылаемся на результат сложения комплексного числа
-    @return Возврат по значению сложения
+    @brief РЎСЃС‹Р»Р°РµРјСЃСЏ РЅР° СЂРµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р’РѕР·РІСЂР°С‚ РїРѕ Р·РЅР°С‡РµРЅРёСЋ СЃР»РѕР¶РµРЅРёСЏ
 */
-Complex & Complex::operator += (const   Complex &  aRval)
+Complex & Complex :: operator += (const   Complex &  aRval)
 {
     Re += aRval.Re;
     Im += aRval.Im;
@@ -160,10 +160,10 @@ Complex & Complex::operator += (const   Complex &  aRval)
 }
 
 /*!
-    @brief Ссылаемся на результат вычитания комплексного числа
-    @return Возврат по значению вычитания
+    @brief РЎСЃС‹Р»Р°РµРјСЃСЏ РЅР° СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёС‚Р°РЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р’РѕР·РІСЂР°С‚ РїРѕ Р·РЅР°С‡РµРЅРёСЋ РІС‹С‡РёС‚Р°РЅРёСЏ
 */
-Complex & Complex::operator -= (const Complex & aRval)
+Complex & Complex :: operator -= (const Complex & aRval)
 {
     Re -= aRval.Re;
     Im -= aRval.Im;
@@ -171,10 +171,10 @@ Complex & Complex::operator -= (const Complex & aRval)
 }
 
 /*!
-    @brief Ссылаемся на результат умножения комплексного числа
-    @return Возврат по значению умножения
+    @brief РЎСЃС‹Р»Р°РµРјСЃСЏ РЅР° СЂРµР·СѓР»СЊС‚Р°С‚ СѓРјРЅРѕР¶РµРЅРёСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р’РѕР·РІСЂР°С‚ РїРѕ Р·РЅР°С‡РµРЅРёСЋ СѓРјРЅРѕР¶РµРЅРёСЏ
 */
-Complex & Complex::operator *= (const Complex & aRval)
+Complex & Complex :: operator *= (const Complex & aRval)
 {
     double tmpRe = Re;
     Re = Re * aRval.Re - Im * aRval.Im;
@@ -183,30 +183,30 @@ Complex & Complex::operator *= (const Complex & aRval)
 }
 
 /*!
-    @brief Ссылаемся на результат сложения действительного числа
-    @return Возврат по значению сложения
+    @brief РЎСЃС‹Р»Р°РµРјСЃСЏ РЅР° СЂРµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р’РѕР·РІСЂР°С‚ РїРѕ Р·РЅР°С‡РµРЅРёСЋ СЃР»РѕР¶РµРЅРёСЏ
 */
 Complex& Complex::operator += (const double& aRval)
 {
     Re += aRval;
     return *this;
-}
+    }
 
 /*!
-    @brief Ссылаемся на результат вычитания действительного числа
-    @return Возврат по значению вычитания
+    @brief РЎСЃС‹Р»Р°РµРјСЃСЏ РЅР° СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёС‚Р°РЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р’РѕР·РІСЂР°С‚ РїРѕ Р·РЅР°С‡РµРЅРёСЋ РІС‹С‡РёС‚Р°РЅРёСЏ
 */
-Complex & Complex::operator -= (const double & aRval)
+Complex & Complex :: operator -= (const double & aRval)
 {
     Re -= aRval;
     return *this;
 }
 
 /*!
-    @brief Ссылаемся на результат умножения действительного числа
-    @return Возврат по значению умножения
+    @brief РЎСЃС‹Р»Р°РµРјСЃСЏ РЅР° СЂРµР·СѓР»СЊС‚Р°С‚ СѓРјРЅРѕР¶РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р’РѕР·РІСЂР°С‚ РїРѕ Р·РЅР°С‡РµРЅРёСЋ СѓРјРЅРѕР¶РµРЅРёСЏ
 */
-Complex & Complex::operator *= (const double & aRval)
+Complex & Complex :: operator *= (const double & aRval)
 {
     Re *= aRval;
     Im *= aRval;
@@ -214,10 +214,10 @@ Complex & Complex::operator *= (const double & aRval)
 }
 
 /*!
-    @brief Ссылаемся на результат деления действительного числа
-    @return Возврат по значению деления
+    @brief РЎСЃС‹Р»Р°РµРјСЃСЏ РЅР° СЂРµР·СѓР»СЊС‚Р°С‚ РґРµР»РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р’РѕР·РІСЂР°С‚ РїРѕ Р·РЅР°С‡РµРЅРёСЋ РґРµР»РµРЅРёСЏ
 */
-Complex & Complex::operator /= (const double & aRval)
+Complex & Complex :: operator /= (const double & aRval)
 {
     Re /= aRval;
     Im /= aRval;
@@ -225,10 +225,10 @@ Complex & Complex::operator /= (const double & aRval)
 }
 
 /*!
-    @brief Ссылаемся на результат равенства комплексного числа
-    @return Возврат по значению равенства
+    @brief РЎСЃС‹Р»Р°РµРјСЃСЏ РЅР° СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°РІРµРЅСЃС‚РІР° РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р’РѕР·РІСЂР°С‚ РїРѕ Р·РЅР°С‡РµРЅРёСЋ СЂР°РІРµРЅСЃС‚РІР°
 */
-Complex & Complex::operator = (const Complex & aRval)
+Complex & Complex :: operator = (const Complex & aRval)
 {
     Re = aRval.Re;
     Im = aRval.Im;
@@ -236,10 +236,10 @@ Complex & Complex::operator = (const Complex & aRval)
 }
 
 /*!
-    @brief Ссылаемся на результат равенства действительного числа
-    @return Возврат по значению равенства
+    @brief РЎСЃС‹Р»Р°РµРјСЃСЏ РЅР° СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°РІРµРЅСЃС‚РІР° РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°
+    @return Р’РѕР·РІСЂР°С‚ РїРѕ Р·РЅР°С‡РµРЅРёСЋ СЂР°РІРµРЅСЃС‚РІР°
 */
-Complex & Complex::operator = (const double & aRval)
+Complex & Complex :: operator = (const double & aRval)
 {
     Re = aRval;
     Im = 0.0;
@@ -247,8 +247,8 @@ Complex & Complex::operator = (const double & aRval)
 }
 
 /*!
-    @brief Извлекаем действительную и мнимую состовляющие
-    @return Извлечение
+    @brief РР·РІР»РµРєР°РµРј РґРµР№СЃС‚РІРёС‚РµР»СЊРЅСѓСЋ Рё РјРЅРёРјСѓСЋ СЃРѕСЃС‚Р°РІР»СЏСЋС‰РёРµ
+    @return РР·РІР»РµС‡РµРЅРёРµ
 */
 istream & operator >> (istream & stream, Complex & aRval)
 {
@@ -258,8 +258,8 @@ istream & operator >> (istream & stream, Complex & aRval)
 }
 
 /*!
-    @brief Вставляем действительную и мнимую состовляющие
-    @return Вставление
+    @brief Р’СЃС‚Р°РІР»СЏРµРј РґРµР№СЃС‚РІРёС‚РµР»СЊРЅСѓСЋ Рё РјРЅРёРјСѓСЋ СЃРѕСЃС‚Р°РІР»СЏСЋС‰РёРµ
+    @return Р’СЃС‚Р°РІР»РµРЅРёРµ
 */
 ostream & operator << (ostream & stream, Complex & aRval)
 {
@@ -271,9 +271,9 @@ ostream & operator << (ostream & stream, Complex & aRval)
 }
 
 /*!
-    @brief Возвращает результат сложения действительного и комплексного чисел
-    @param aLval Действительное число
-    @return Результат сложения
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ Рё РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃРµР»
+    @param aLval Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ
+    @return Р РµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ
 */
 Complex operator + (const double & aLval, const Complex & aRval)
 {
@@ -284,8 +284,8 @@ Complex operator + (const double & aLval, const Complex & aRval)
 }
 
 /*!
-    @brief Возвращает результат вычитания действительного и комплексного чисел
-    @return Результат сложения
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёС‚Р°РЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ Рё РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃРµР»
+    @return Р РµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ
 */
 Complex operator - (const double & aLval, const Complex & aRval)
 {
@@ -296,8 +296,8 @@ Complex operator - (const double & aLval, const Complex & aRval)
 }
 
 /*!
-    @brief Возвращает результат умножения действительного и комплексного чисел
-    @return Результат сложения
+    @brief Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ СѓРјРЅРѕР¶РµРЅРёСЏ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРіРѕ Рё РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ С‡РёСЃРµР»
+    @return Р РµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ
 */
 Complex operator * (const double & aLval, const Complex & aRval)
 {
