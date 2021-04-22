@@ -1,6 +1,6 @@
 /*!
     @file
-    @brief Header file of Complex.
+    @brief Заголовочный файл класса Complex.
 */
 #ifndef _MY_COMPLEX_H_
 #define _MY_COMPLEX_H_
@@ -14,12 +14,12 @@ using namespace std;
 class Complex
 {
     /*!
-        @brief The real component
+        @brief Действительная составляющая
     */
     double Re;
 
     /*!
-        @brief Imaginary component
+        @brief Мнимая составляющая
     */
     double Im;
 
