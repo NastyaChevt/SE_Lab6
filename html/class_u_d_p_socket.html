@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C++ sockets on Unix and Windows: Класс UDPSocket</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C++ sockets on Unix and Windows
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_u_d_p_socket.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="class_u_d_p_socket-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс UDPSocket</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_practical_socket_8h_source.html">PracticalSocket.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:UDPSocket:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_u_d_p_socket__inherit__graph.png" border="0" usemap="#a_u_d_p_socket_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_u_d_p_socket_inherit__map" id="a_u_d_p_socket_inherit__map">
+<area shape="rect" title=" " alt="" coords="37,155,127,181"/>
+<area shape="rect" href="class_communicating_socket.html" title=" " alt="" coords="5,80,159,107"/>
+<area shape="rect" href="class_socket.html" title=" " alt="" coords="51,5,113,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса UDPSocket:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_u_d_p_socket__coll__graph.png" border="0" usemap="#a_u_d_p_socket_coll__map" alt="Collaboration graph"/></div>
+<map name="a_u_d_p_socket_coll__map" id="a_u_d_p_socket_coll__map">
+<area shape="rect" title=" " alt="" coords="37,155,127,181"/>
+<area shape="rect" href="class_communicating_socket.html" title=" " alt="" coords="5,80,159,107"/>
+<area shape="rect" href="class_socket.html" title=" " alt="" coords="51,5,113,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a4f86f3023f5a08f6355802599a10e100"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#a4f86f3023f5a08f6355802599a10e100">UDPSocket</a> ()  throw (SocketException)</td></tr>
+<tr class="separator:a4f86f3023f5a08f6355802599a10e100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14dcb55c4b60b12d4a7fff648cbb825f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#a14dcb55c4b60b12d4a7fff648cbb825f">UDPSocket</a> (unsigned short localPort)  throw (SocketException)</td></tr>
+<tr class="separator:a14dcb55c4b60b12d4a7fff648cbb825f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19281c523f15ed30d7d78f09033713d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#af19281c523f15ed30d7d78f09033713d">UDPSocket</a> (const string &amp;localAddress, unsigned short localPort)  throw (SocketException)</td></tr>
+<tr class="separator:af19281c523f15ed30d7d78f09033713d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7482e8e61cef160e1a7c0d6ac15c01be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#a7482e8e61cef160e1a7c0d6ac15c01be">disconnect</a> ()  throw (SocketException)</td></tr>
+<tr class="separator:a7482e8e61cef160e1a7c0d6ac15c01be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a3595e226f273953cbd38618af5d5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#a41a3595e226f273953cbd38618af5d5b">sendTo</a> (const void *buffer, int bufferLen, const string &amp;foreignAddress, unsigned short foreignPort)  throw (SocketException)</td></tr>
+<tr class="separator:a41a3595e226f273953cbd38618af5d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd5c064e2496bd8b1888fd4e1b68949"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#abcd5c064e2496bd8b1888fd4e1b68949">recvFrom</a> (void *buffer, int bufferLen, string &amp;sourceAddress, unsigned short &amp;sourcePort)  throw (SocketException)</td></tr>
+<tr class="separator:abcd5c064e2496bd8b1888fd4e1b68949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dcfff33b45d1b84b5a602fc6f4a27f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#a4dcfff33b45d1b84b5a602fc6f4a27f8">setMulticastTTL</a> (unsigned char multicastTTL)  throw (SocketException)</td></tr>
+<tr class="separator:a4dcfff33b45d1b84b5a602fc6f4a27f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b20c1e8bd49a9bd9b53dd4f1c8d4c11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#a1b20c1e8bd49a9bd9b53dd4f1c8d4c11">joinGroup</a> (const string &amp;multicastGroup)  throw (SocketException)</td></tr>
+<tr class="separator:a1b20c1e8bd49a9bd9b53dd4f1c8d4c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78835eaeca8a5ac039b4579c795e3640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#a78835eaeca8a5ac039b4579c795e3640">leaveGroup</a> (const string &amp;multicastGroup)  throw (SocketException)</td></tr>
+<tr class="separator:a78835eaeca8a5ac039b4579c795e3640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_communicating_socket"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_communicating_socket')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="class_communicating_socket.html">CommunicatingSocket</a></td></tr>
+<tr class="memitem:a9192374d9baab8e189860aa8d913683c inherit pub_methods_class_communicating_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communicating_socket.html#a9192374d9baab8e189860aa8d913683c">connect</a> (const string &amp;foreignAddress, unsigned short foreignPort)  throw (SocketException)</td></tr>
+<tr class="separator:a9192374d9baab8e189860aa8d913683c inherit pub_methods_class_communicating_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4e86085c064641e86ae24ea29bbb94 inherit pub_methods_class_communicating_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communicating_socket.html#aca4e86085c064641e86ae24ea29bbb94">send</a> (const void *buffer, int bufferLen)  throw (SocketException)</td></tr>
+<tr class="separator:aca4e86085c064641e86ae24ea29bbb94 inherit pub_methods_class_communicating_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf1fd470c0060171b68df9f68c7bd01 inherit pub_methods_class_communicating_socket"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communicating_socket.html#a7cf1fd470c0060171b68df9f68c7bd01">recv</a> (void *buffer, int bufferLen)  throw (SocketException)</td></tr>
+<tr class="separator:a7cf1fd470c0060171b68df9f68c7bd01 inherit pub_methods_class_communicating_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f9eca30ef56836cf23c163c848c09e inherit pub_methods_class_communicating_socket"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communicating_socket.html#a13f9eca30ef56836cf23c163c848c09e">getForeignAddress</a> ()  throw (SocketException)</td></tr>
+<tr class="separator:a13f9eca30ef56836cf23c163c848c09e inherit pub_methods_class_communicating_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184fbb4775184b87ebd886a5587eb1a3 inherit pub_methods_class_communicating_socket"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communicating_socket.html#a184fbb4775184b87ebd886a5587eb1a3">getForeignPort</a> ()  throw (SocketException)</td></tr>
+<tr class="separator:a184fbb4775184b87ebd886a5587eb1a3 inherit pub_methods_class_communicating_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_socket"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_socket')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="class_socket.html">Socket</a></td></tr>
+<tr class="memitem:aeac4eb6379a543d38ed88977d3b6630a inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a> ()</td></tr>
+<tr class="separator:aeac4eb6379a543d38ed88977d3b6630a inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fca07bdfa97874fba1a17995ed7cda3 inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a0fca07bdfa97874fba1a17995ed7cda3">getLocalAddress</a> ()  throw (SocketException)</td></tr>
+<tr class="separator:a0fca07bdfa97874fba1a17995ed7cda3 inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01143b667d69483a2f53d0f4ce7eeed inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ae01143b667d69483a2f53d0f4ce7eeed">getLocalPort</a> ()  throw (SocketException)</td></tr>
+<tr class="separator:ae01143b667d69483a2f53d0f4ce7eeed inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a773fe4a35146002de76952e16fdebcfa inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a773fe4a35146002de76952e16fdebcfa">setLocalPort</a> (unsigned short localPort)  throw (SocketException)</td></tr>
+<tr class="separator:a773fe4a35146002de76952e16fdebcfa inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b986410bc2e606ba27d01fa7cb8836 inherit pub_methods_class_socket"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aa6b986410bc2e606ba27d01fa7cb8836">setLocalAddressAndPort</a> (const string &amp;localAddress, unsigned short localPort=0)  throw (SocketException)</td></tr>
+<tr class="separator:aa6b986410bc2e606ba27d01fa7cb8836 inherit pub_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a316f08a017aa160643812f3c08734d27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_d_p_socket.html#a316f08a017aa160643812f3c08734d27">setBroadcast</a> ()</td></tr>
+<tr class="separator:a316f08a017aa160643812f3c08734d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_socket"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_socket')"><img src="closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="class_socket.html">Socket</a></td></tr>
+<tr class="memitem:ac5060aeb501044044351d5a85b3fc95f inherit pub_static_methods_class_socket"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ac5060aeb501044044351d5a85b3fc95f">cleanUp</a> ()  throw (SocketException)</td></tr>
+<tr class="separator:ac5060aeb501044044351d5a85b3fc95f inherit pub_static_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982c63b25c5b756321a74074a275adbc inherit pub_static_methods_class_socket"><td class="memItemLeft" align="right" valign="top">static unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a982c63b25c5b756321a74074a275adbc">resolveService</a> (const string &amp;service, const string &amp;protocol=&quot;tcp&quot;)</td></tr>
+<tr class="separator:a982c63b25c5b756321a74074a275adbc inherit pub_static_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_communicating_socket"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_communicating_socket')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="class_communicating_socket.html">CommunicatingSocket</a></td></tr>
+<tr class="memitem:a0017517b8d6e761fde0c40475af3b2ab inherit pro_methods_class_communicating_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communicating_socket.html#a0017517b8d6e761fde0c40475af3b2ab">CommunicatingSocket</a> (int type, int protocol)  throw (SocketException)</td></tr>
+<tr class="separator:a0017517b8d6e761fde0c40475af3b2ab inherit pro_methods_class_communicating_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d758db782b3be7d28741e92cb613d1 inherit pro_methods_class_communicating_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_communicating_socket.html#a27d758db782b3be7d28741e92cb613d1">CommunicatingSocket</a> (int newConnSD)</td></tr>
+<tr class="separator:a27d758db782b3be7d28741e92cb613d1 inherit pro_methods_class_communicating_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_socket"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_socket')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="class_socket.html">Socket</a></td></tr>
+<tr class="memitem:a53e00027bab2125a2b407914c6148589 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a53e00027bab2125a2b407914c6148589">Socket</a> (int type, int protocol)  throw (SocketException)</td></tr>
+<tr class="separator:a53e00027bab2125a2b407914c6148589 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a2609eef6559336a595a336f138d395 inherit pro_methods_class_socket"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a6a2609eef6559336a595a336f138d395">Socket</a> (int <a class="el" href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">sockDesc</a>)</td></tr>
+<tr class="separator:a6a2609eef6559336a595a336f138d395 inherit pro_methods_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_socket"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_socket')"><img src="closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="class_socket.html">Socket</a></td></tr>
+<tr class="memitem:ad5704d2fdfb062139e1f88831617bbfb inherit pro_attribs_class_socket"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">sockDesc</a></td></tr>
+<tr class="separator:ad5704d2fdfb062139e1f88831617bbfb inherit pro_attribs_class_socket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>UDP socket class </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8h_source.html">PracticalSocket.h</a> строка <a class="el" href="_practical_socket_8h_source.html#l00257">257</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a4f86f3023f5a08f6355802599a10e100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f86f3023f5a08f6355802599a10e100">&#9670;&nbsp;</a></span>UDPSocket() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UDPSocket::UDPSocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_socket_exception.html">SocketException</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a UDP socket </p><dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_socket_exception.html">SocketException</a></td><td>thrown if unable to create UDP socket </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00281">281</a></p>
+<div class="fragment"><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                            : <a class="code" href="class_communicating_socket.html#a0017517b8d6e761fde0c40475af3b2ab">CommunicatingSocket</a>(SOCK_DGRAM,</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    IPPROTO_UDP) {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <a class="code" href="class_u_d_p_socket.html#a316f08a017aa160643812f3c08734d27">setBroadcast</a>();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
+<div class="ttc" id="aclass_communicating_socket_html_a0017517b8d6e761fde0c40475af3b2ab"><div class="ttname"><a href="class_communicating_socket.html#a0017517b8d6e761fde0c40475af3b2ab">CommunicatingSocket::CommunicatingSocket</a></div><div class="ttdeci">CommunicatingSocket(int type, int protocol)</div><div class="ttdef"><b>Definition:</b> <a href="_practical_socket_8cpp_source.html#l00177">PracticalSocket.cpp:177</a></div></div>
+<div class="ttc" id="aclass_u_d_p_socket_html_a316f08a017aa160643812f3c08734d27"><div class="ttname"><a href="class_u_d_p_socket.html#a316f08a017aa160643812f3c08734d27">UDPSocket::setBroadcast</a></div><div class="ttdeci">void setBroadcast()</div><div class="ttdef"><b>Definition:</b> <a href="_practical_socket_8cpp_source.html#l00298">PracticalSocket.cpp:298</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_u_d_p_socket_a4f86f3023f5a08f6355802599a10e100_cgraph.png" border="0" usemap="#aclass_u_d_p_socket_a4f86f3023f5a08f6355802599a10e100_cgraph" alt=""/></div>
+<map name="aclass_u_d_p_socket_a4f86f3023f5a08f6355802599a10e100_cgraph" id="aclass_u_d_p_socket_a4f86f3023f5a08f6355802599a10e100_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" href="class_u_d_p_socket.html#a316f08a017aa160643812f3c08734d27" title=" " alt="" coords="220,5,395,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a14dcb55c4b60b12d4a7fff648cbb825f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14dcb55c4b60b12d4a7fff648cbb825f">&#9670;&nbsp;</a></span>UDPSocket() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UDPSocket::UDPSocket </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>localPort</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_socket_exception.html">SocketException</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a UDP socket with the given local port </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localPort</td><td>local port </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_socket_exception.html">SocketException</a></td><td>thrown if unable to create UDP socket </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00286">286</a></p>
+<div class="fragment"><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                                                                     : </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <a class="code" href="class_communicating_socket.html#a0017517b8d6e761fde0c40475af3b2ab">CommunicatingSocket</a>(SOCK_DGRAM, IPPROTO_UDP) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <a class="code" href="class_socket.html#a773fe4a35146002de76952e16fdebcfa">setLocalPort</a>(localPort);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <a class="code" href="class_u_d_p_socket.html#a316f08a017aa160643812f3c08734d27">setBroadcast</a>();</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;}</div>
+<div class="ttc" id="aclass_socket_html_a773fe4a35146002de76952e16fdebcfa"><div class="ttname"><a href="class_socket.html#a773fe4a35146002de76952e16fdebcfa">Socket::setLocalPort</a></div><div class="ttdeci">void setLocalPort(unsigned short localPort)</div><div class="ttdef"><b>Definition:</b> <a href="_practical_socket_8cpp_source.html#l00133">PracticalSocket.cpp:133</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af19281c523f15ed30d7d78f09033713d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19281c523f15ed30d7d78f09033713d">&#9670;&nbsp;</a></span>UDPSocket() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UDPSocket::UDPSocket </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>localAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>localPort</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_socket_exception.html">SocketException</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a UDP socket with the given local port and address </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localAddress</td><td>local address </td></tr>
+    <tr><td class="paramname">localPort</td><td>local port </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_socket_exception.html">SocketException</a></td><td>thrown if unable to create UDP socket </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00292">292</a></p>
+<div class="fragment"><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                            : <a class="code" href="class_communicating_socket.html#a0017517b8d6e761fde0c40475af3b2ab">CommunicatingSocket</a>(SOCK_DGRAM, IPPROTO_UDP) {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <a class="code" href="class_socket.html#aa6b986410bc2e606ba27d01fa7cb8836">setLocalAddressAndPort</a>(localAddress, localPort);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <a class="code" href="class_u_d_p_socket.html#a316f08a017aa160643812f3c08734d27">setBroadcast</a>();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
+<div class="ttc" id="aclass_socket_html_aa6b986410bc2e606ba27d01fa7cb8836"><div class="ttname"><a href="class_socket.html#aa6b986410bc2e606ba27d01fa7cb8836">Socket::setLocalAddressAndPort</a></div><div class="ttdeci">void setLocalAddressAndPort(const string &amp;localAddress, unsigned short localPort=0)</div><div class="ttdef"><b>Definition:</b> <a href="_practical_socket_8cpp_source.html#l00146">PracticalSocket.cpp:146</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a7482e8e61cef160e1a7c0d6ac15c01be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7482e8e61cef160e1a7c0d6ac15c01be">&#9670;&nbsp;</a></span>disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDPSocket::disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_socket_exception.html">SocketException</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unset foreign address and port </p><dl class="section return"><dt>Возвращает</dt><dd>true if disassociation is successful </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_socket_exception.html">SocketException</a></td><td>thrown if unable to disconnect UDP socket </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00306">306</a></p>
+<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                                  {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  sockaddr_in nullAddr;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  memset(&amp;nullAddr, 0, <span class="keyword">sizeof</span>(nullAddr));</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  nullAddr.sin_family = AF_UNSPEC;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="comment">// Try to disconnect</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordflow">if</span> (::<a class="code" href="class_communicating_socket.html#a9192374d9baab8e189860aa8d913683c">connect</a>(<a class="code" href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">sockDesc</a>, (sockaddr *) &amp;nullAddr, <span class="keyword">sizeof</span>(nullAddr)) &lt; 0) {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">   #ifdef WIN32</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">if</span> (errno != WSAEAFNOSUPPORT) {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">   #else</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">if</span> (errno != EAFNOSUPPORT) {</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="preprocessor">   #endif</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="class_socket_exception.html">SocketException</a>(<span class="stringliteral">&quot;Disconnect failed (connect())&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}</div>
+<div class="ttc" id="aclass_communicating_socket_html_a9192374d9baab8e189860aa8d913683c"><div class="ttname"><a href="class_communicating_socket.html#a9192374d9baab8e189860aa8d913683c">CommunicatingSocket::connect</a></div><div class="ttdeci">void connect(const string &amp;foreignAddress, unsigned short foreignPort)</div><div class="ttdef"><b>Definition:</b> <a href="_practical_socket_8cpp_source.html#l00184">PracticalSocket.cpp:184</a></div></div>
+<div class="ttc" id="aclass_socket_exception_html"><div class="ttname"><a href="class_socket_exception.html">SocketException</a></div><div class="ttdef"><b>Definition:</b> <a href="_practical_socket_8h_source.html#l00031">PracticalSocket.h:31</a></div></div>
+<div class="ttc" id="aclass_socket_html_ad5704d2fdfb062139e1f88831617bbfb"><div class="ttname"><a href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">Socket::sockDesc</a></div><div class="ttdeci">int sockDesc</div><div class="ttdef"><b>Definition:</b> <a href="_practical_socket_8h_source.html#l00129">PracticalSocket.h:129</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_u_d_p_socket_a7482e8e61cef160e1a7c0d6ac15c01be_cgraph.png" border="0" usemap="#aclass_u_d_p_socket_a7482e8e61cef160e1a7c0d6ac15c01be_cgraph" alt=""/></div>
+<map name="aclass_u_d_p_socket_a7482e8e61cef160e1a7c0d6ac15c01be_cgraph" id="aclass_u_d_p_socket_a7482e8e61cef160e1a7c0d6ac15c01be_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,167,39"/>
+<area shape="rect" href="class_communicating_socket.html#a9192374d9baab8e189860aa8d913683c" title=" " alt="" coords="215,5,368,47"/>
+<area shape="rect" href="_practical_socket_8cpp.html#a155e03535e1d5c1f5df7ceafe63dbdb0" title=" " alt="" coords="416,13,477,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1b20c1e8bd49a9bd9b53dd4f1c8d4c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b20c1e8bd49a9bd9b53dd4f1c8d4c11">&#9670;&nbsp;</a></span>joinGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDPSocket::joinGroup </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>multicastGroup</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_socket_exception.html">SocketException</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Join the specified multicast group </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">multicastGroup</td><td>multicast group address to join </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_socket_exception.html">SocketException</a></td><td>thrown if unable to join group </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00358">358</a></p>
+<div class="fragment"><div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                                                                             {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  <span class="keyword">struct </span>ip_mreq multicastRequest;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  multicastRequest.imr_multiaddr.s_addr = inet_addr(multicastGroup.c_str());</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  multicastRequest.imr_interface.s_addr = htonl(INADDR_ANY);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <span class="keywordflow">if</span> (setsockopt(<a class="code" href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">sockDesc</a>, IPPROTO_IP, IP_ADD_MEMBERSHIP, </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                 (<a class="code" href="_practical_socket_8cpp.html#aba7a57aadc5c75eaab8ee698d0fa6608">raw_type</a> *) &amp;multicastRequest, </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                 <span class="keyword">sizeof</span>(multicastRequest)) &lt; 0) {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="class_socket_exception.html">SocketException</a>(<span class="stringliteral">&quot;Multicast group join failed (setsockopt())&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="ttc" id="a_practical_socket_8cpp_html_aba7a57aadc5c75eaab8ee698d0fa6608"><div class="ttname"><a href="_practical_socket_8cpp.html#aba7a57aadc5c75eaab8ee698d0fa6608">raw_type</a></div><div class="ttdeci">void raw_type</div><div class="ttdef"><b>Definition:</b> <a href="_practical_socket_8cpp_source.html#l00033">PracticalSocket.cpp:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a78835eaeca8a5ac039b4579c795e3640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78835eaeca8a5ac039b4579c795e3640">&#9670;&nbsp;</a></span>leaveGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDPSocket::leaveGroup </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>multicastGroup</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_socket_exception.html">SocketException</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Leave the specified multicast group </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">multicastGroup</td><td>multicast group address to leave </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_socket_exception.html">SocketException</a></td><td>thrown if unable to leave group </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00370">370</a></p>
+<div class="fragment"><div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  <span class="keyword">struct </span>ip_mreq multicastRequest;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  multicastRequest.imr_multiaddr.s_addr = inet_addr(multicastGroup.c_str());</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  multicastRequest.imr_interface.s_addr = htonl(INADDR_ANY);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  <span class="keywordflow">if</span> (setsockopt(<a class="code" href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">sockDesc</a>, IPPROTO_IP, IP_DROP_MEMBERSHIP, </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                 (<a class="code" href="_practical_socket_8cpp.html#aba7a57aadc5c75eaab8ee698d0fa6608">raw_type</a> *) &amp;multicastRequest, </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                 <span class="keyword">sizeof</span>(multicastRequest)) &lt; 0) {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="class_socket_exception.html">SocketException</a>(<span class="stringliteral">&quot;Multicast group leave failed (setsockopt())&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  }</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abcd5c064e2496bd8b1888fd4e1b68949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd5c064e2496bd8b1888fd4e1b68949">&#9670;&nbsp;</a></span>recvFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UDPSocket::recvFrom </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bufferLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>sourceAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short &amp;&#160;</td>
+          <td class="paramname"><em>sourcePort</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_socket_exception.html">SocketException</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read read up to bufferLen bytes data from this socket. The given buffer is where the data will be placed </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>buffer to receive data </td></tr>
+    <tr><td class="paramname">bufferLen</td><td>maximum number of bytes to receive </td></tr>
+    <tr><td class="paramname">sourceAddress</td><td>address of datagram source </td></tr>
+    <tr><td class="paramname">sourcePort</td><td>port of data source </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>number of bytes received and -1 for error </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_socket_exception.html">SocketException</a></td><td>thrown if unable to receive datagram </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00336">336</a></p>
+<div class="fragment"><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                                                       {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  sockaddr_in clntAddr;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  socklen_t addrLen = <span class="keyword">sizeof</span>(clntAddr);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keywordtype">int</span> rtn;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  <span class="keywordflow">if</span> ((rtn = recvfrom(<a class="code" href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">sockDesc</a>, (<a class="code" href="_practical_socket_8cpp.html#aba7a57aadc5c75eaab8ee698d0fa6608">raw_type</a> *) buffer, bufferLen, 0, </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                      (sockaddr *) &amp;clntAddr, (socklen_t *) &amp;addrLen)) &lt; 0) {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="class_socket_exception.html">SocketException</a>(<span class="stringliteral">&quot;Receive failed (recvfrom())&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  sourceAddress = inet_ntoa(clntAddr.sin_addr);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  sourcePort = ntohs(clntAddr.sin_port);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  <span class="keywordflow">return</span> rtn;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a41a3595e226f273953cbd38618af5d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a3595e226f273953cbd38618af5d5b">&#9670;&nbsp;</a></span>sendTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDPSocket::sendTo </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bufferLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>foreignAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>foreignPort</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_socket_exception.html">SocketException</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send the given buffer as a UDP datagram to the specified address/port </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>buffer to be written </td></tr>
+    <tr><td class="paramname">bufferLen</td><td>number of bytes to write </td></tr>
+    <tr><td class="paramname">foreignAddress</td><td>address (IP address or name) to send to </td></tr>
+    <tr><td class="paramname">foreignPort</td><td>port number to send to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true if send is successful </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_socket_exception.html">SocketException</a></td><td>thrown if unable to send datagram </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00323">323</a></p>
+<div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                           {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  sockaddr_in destAddr;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <a class="code" href="_practical_socket_8cpp.html#a155e03535e1d5c1f5df7ceafe63dbdb0">fillAddr</a>(foreignAddress, foreignPort, destAddr);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="comment">// Write out the whole buffer as a single message.</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordflow">if</span> (sendto(<a class="code" href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">sockDesc</a>, (<a class="code" href="_practical_socket_8cpp.html#aba7a57aadc5c75eaab8ee698d0fa6608">raw_type</a> *) buffer, bufferLen, 0,</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;             (sockaddr *) &amp;destAddr, <span class="keyword">sizeof</span>(destAddr)) != bufferLen) {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="class_socket_exception.html">SocketException</a>(<span class="stringliteral">&quot;Send failed (sendto())&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
+<div class="ttc" id="a_practical_socket_8cpp_html_a155e03535e1d5c1f5df7ceafe63dbdb0"><div class="ttname"><a href="_practical_socket_8cpp.html#a155e03535e1d5c1f5df7ceafe63dbdb0">fillAddr</a></div><div class="ttdeci">static void fillAddr(const string &amp;address, unsigned short port, sockaddr_in &amp;addr)</div><div class="ttdef"><b>Definition:</b> <a href="_practical_socket_8cpp_source.html#l00062">PracticalSocket.cpp:62</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_u_d_p_socket_a41a3595e226f273953cbd38618af5d5b_cgraph.png" border="0" usemap="#aclass_u_d_p_socket_a41a3595e226f273953cbd38618af5d5b_cgraph" alt=""/></div>
+<map name="aclass_u_d_p_socket_a41a3595e226f273953cbd38618af5d5b_cgraph" id="aclass_u_d_p_socket_a41a3595e226f273953cbd38618af5d5b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,145,32"/>
+<area shape="rect" href="_practical_socket_8cpp.html#a155e03535e1d5c1f5df7ceafe63dbdb0" title=" " alt="" coords="193,5,255,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a316f08a017aa160643812f3c08734d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a316f08a017aa160643812f3c08734d27">&#9670;&nbsp;</a></span>setBroadcast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDPSocket::setBroadcast </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00298">298</a></p>
+<div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                             {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="comment">// If this fails, we&#39;ll hear about it when we try to send.  This will allow </span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="comment">// system that cannot broadcast to continue if they don&#39;t plan to broadcast</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordtype">int</span> broadcastPermission = 1;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  setsockopt(<a class="code" href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">sockDesc</a>, SOL_SOCKET, SO_BROADCAST, </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;             (<a class="code" href="_practical_socket_8cpp.html#aba7a57aadc5c75eaab8ee698d0fa6608">raw_type</a> *) &amp;broadcastPermission, <span class="keyword">sizeof</span>(broadcastPermission));</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_u_d_p_socket_a316f08a017aa160643812f3c08734d27_icgraph.png" border="0" usemap="#aclass_u_d_p_socket_a316f08a017aa160643812f3c08734d27_icgraph" alt=""/></div>
+<map name="aclass_u_d_p_socket_a316f08a017aa160643812f3c08734d27_icgraph" id="aclass_u_d_p_socket_a316f08a017aa160643812f3c08734d27_icgraph">
+<area shape="rect" title=" " alt="" coords="220,5,395,32"/>
+<area shape="rect" href="class_u_d_p_socket.html#a4f86f3023f5a08f6355802599a10e100" title=" " alt="" coords="5,5,172,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4dcfff33b45d1b84b5a602fc6f4a27f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dcfff33b45d1b84b5a602fc6f4a27f8">&#9670;&nbsp;</a></span>setMulticastTTL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UDPSocket::setMulticastTTL </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>multicastTTL</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_socket_exception.html">SocketException</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the multicast TTL </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">multicastTTL</td><td>multicast TTL </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_socket_exception.html">SocketException</a></td><td>thrown if unable to set TTL </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00351">351</a></p>
+<div class="fragment"><div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                                                                                 {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keywordflow">if</span> (setsockopt(<a class="code" href="class_socket.html#ad5704d2fdfb062139e1f88831617bbfb">sockDesc</a>, IPPROTO_IP, IP_MULTICAST_TTL, </div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                 (<a class="code" href="_practical_socket_8cpp.html#aba7a57aadc5c75eaab8ee698d0fa6608">raw_type</a> *) &amp;multicastTTL, <span class="keyword">sizeof</span>(multicastTTL)) &lt; 0) {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="class_socket_exception.html">SocketException</a>(<span class="stringliteral">&quot;Multicast TTL set failed (setsockopt())&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  }</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>D:/Nastya/Tex.pr/LR7/src/<a class="el" href="_practical_socket_8h_source.html">PracticalSocket.h</a></li>
+<li>D:/Nastya/Tex.pr/LR7/src/<a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_u_d_p_socket.html">UDPSocket</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
