@@ -1,6 +1,6 @@
 /*!
     @file
-    @brief Заголовочный файл класса Complex
+    @brief Header file of Complex.
 */
 #ifndef _MY_COMPLEX_H_
 #define _MY_COMPLEX_H_
@@ -9,70 +9,47 @@
 using namespace std;
 
 /*!
-    @brief Класс комплексного числа
+    @brief Class of a complex number
 */
 class Complex
 {
     /*!
-        @brief Действительаня составляющая
+        @brief The real component
     */
     double Re;
 
     /*!
-        @brief Мнимая составляющая
+        @brief Imaginary component
     */
     double Im;
 
     /*!
-        @brief Список членов класса
-        @param aRe Действительная составляющая
-        @param aIm Мнимая составляющая
+        @brief List of class members.
     */
     public:
         Complex(double aRe = 0, double aIm = 0);
         Complex(const Complex &);
         ~ Complex();
 
-        /*!
-            @brief Установление мнимой и действительной состовляющих
-        */
         void Set(double aRe, double aIm = 0);
         operator double();
 
-        /*!
-            @brief Модуль комплексного числа
-        */
         double abs();
 
-        /*!
-            @brief Перегрузка оператора ввода >>
-        */
         friend istream & operator >> (istream &, Complex &);
 
-        /*!
-            @brief Перегрузка оператора вывода <<
-        */
         friend ostream & operator << (ostream &, Complex &);
         Complex operator + (const Complex &);
         Complex operator - (const Complex &);
         Complex operator + (const double &);
 
-        /*!
-            @brief  Операция сложения
-        */
         friend Complex operator + (const double &, const Complex &);
         Complex operator - (const double &);
 
-        /*!
-            @brief  Операция вычитания
-        */
         friend Complex operator - (const double &, const Complex &);
         Complex operator * (const Complex &);
         Complex operator * (const double&);
 
-        /*!
-            @brief  Операция умножения
-        */
         friend Complex operator * (const double &, const Complex &);
         Complex operator / (const double &);
         Complex & operator += (const Complex &);
